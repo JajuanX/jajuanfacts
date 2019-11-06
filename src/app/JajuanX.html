@@ -1,6 +1,6 @@
 <div class="main">
   <div class="title">
-    <h1>Facts About {{$ctrl.firstName}}</h1>
+    <h1>Facts About Jajuan</h1>
     <div class="formBox">
       <div class="">
         <div class="firstName">
@@ -25,8 +25,8 @@
         <div class="button" ng-click="$ctrl.saveFact($event)">Save Fact</div>
       </div>
       <div ng-show="$ctrl.savedFacts.length > 0" class="allFacts">
-        <div ng-repeat="fact in $ctrl.savedFacts">
-          {{ fact.fact  }}
+        <div ng-repeat="fact in savedFacts">
+          {{ $ctrl.$ctrl.fact.fact  }}
         </div>
       </div>
     </div>

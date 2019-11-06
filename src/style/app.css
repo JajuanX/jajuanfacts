@@ -1,22 +1,121 @@
-/* styles in src/style directory are applied to the whole page */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
 body {
-  background: #0147A7;
-  color: #fff;
+  background-color: black;
+  color: white;
+  width: 100vw;
 }
 
-a {
-  color: #03A9F4;
+.main {
+  display: grid;
+  grid-template-rows: 8% 80% 12%;
+  grid-template-columns: 100%;
+  place-items: center;
+  height: 100vh;
+  margin: auto 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(0);
+}
+.title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center start;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding-left: 50px;
+}
+.formBox {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 50px;
+}
+.formBox > div {
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  grid-column: 2;
+  place-items: center;
 }
 
-main {
-  padding: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  display: block;
+input {
+  border: 2px solid black;
+  font-size: 1rem;
+  padding: 2px;
+  display: inline-block;
 }
 
-footer {
-  text-align: center;
-  font-size: 0.8em;
+.factBox {
+  display: grid;
+  height: 100%;
+  width: 80%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  place-items: center;
+}
+.allFacts {
+  overflow-y: scroll;
+  height: 80px;
+  bottom: 0;
+  z-index: 2;
+  width: 80%;
+}
+
+.fact {
+  font-size: 2em;
+}
+
+.button {
+  display: grid;
+  cursor: pointer;
+  border: 3px solid white;
+  width: 200px;
+  padding: 10px;
+  height: 50px;
+  place-items: center;
+  transition: all .3s;
+}
+.button:hover {
+  background-color: white;
+  color: black;
+}
+.buttonBox {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  place-items: start center;
+  height: 100%;
+}
+.buttonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.allFacts::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.allFacts::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.allFacts::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.allFacts::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.firstName{
+  margin-right: 5px;
 }
